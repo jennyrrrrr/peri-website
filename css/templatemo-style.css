@@ -7,7 +7,8 @@ http://www.templatemo.com/tm-517-timeless
 */
 
 body {
-    background-color: #333333;
+    /* background-color: #333333; */
+    background-color: rgb(2, 7, 25);
     color: #FFFFFF;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-weight: 300;
@@ -57,13 +58,20 @@ h3 {
     width: 50px;
     height: 50px;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     margin: auto;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .tm-video-container {
@@ -94,9 +102,11 @@ h3 {
     left: 60%;
     bottom: 30px;
 }
+
 .tm-video-text-overlay h1 {
-	font-size: 3.4rem;
+    font-size: 3.4rem;
 }
+
 .tm-welcome-text {
     margin-top: 65px;
     margin-bottom: 65px;
@@ -209,7 +219,7 @@ hr {
 .form-control {
     border-radius: 0;
     border-color: #666666;
-	color: #CCC;
+    color: #CCC;
     background: transparent;
     padding: 12px 15px;
 }
@@ -259,7 +269,7 @@ iframe {
 .form-control:focus {
     background-color: transparent;
     border-color: #CCCCCC;
-	color: #FFF;
+    color: #FFF;
     box-shadow: 0 0 0 0.2rem #cccccc14;
 }
 
@@ -307,9 +317,9 @@ p {
     .tm-video-text-overlay {
         left: 45%;
     }
-	.tm-video-text-overlay h1 {
-		font-size: 2.8rem;
-	}
+    .tm-video-text-overlay h1 {
+        font-size: 2.8rem;
+    }
     .tm-timeline-item {
         margin-left: 25px;
     }
@@ -357,7 +367,6 @@ p {
         font-size: 1.8rem;
     }
 }
-
 
 @media (max-width: 480px) {
     .tm-video-container {
