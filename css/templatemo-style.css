@@ -143,7 +143,12 @@ a.tm-text-white:focus {
 }
 
 .tm-sec-title-b {
-    color: rgb(83, 163, 189)
+    /* color: rgb(92, 171, 191) */
+    color: rgb(47, 125, 245);
+}
+
+.tm-dt-dark {
+    color: rgb(217, 224, 212);
 }
 
 .tm-text-green {
@@ -181,11 +186,16 @@ hr {
 
 .tm-timeline-item {
     margin-left: 70px;
+    /* width: 1200px; */
 }
 
 .tm-timeline-item-inner {
     display: flex;
     align-items: center;
+}
+
+.tm-timeline-description-wrap {
+    /* flex: 0 0 300rem; */
 }
 
 .tm-img-timeline {
