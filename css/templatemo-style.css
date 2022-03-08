@@ -134,6 +134,18 @@ a.tm-text-white:focus {
     color: #FFFFFF;
 }
 
+.tm-title-bg {
+    color: rgb(125, 251, 251)
+}
+
+.tm-sec-title-lg {
+    color: rgb(238, 254, 244);
+}
+
+.tm-sec-title-b {
+    color: rgb(83, 163, 189)
+}
+
 .tm-text-green {
     color: #99CC66;
 }
