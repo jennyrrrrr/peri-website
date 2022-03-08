@@ -205,6 +205,13 @@ hr {
     vertical-align: middle;
 }
 
+.tm-img-timeline-lg {
+    width: 260px;
+    height: 260px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .tm-timeline-connector {
     width: 55px;
     height: 3px;

@@ -91,9 +91,16 @@ http://www.templatemo.com/tm-517-timeless
     <div class="container tm-container-2">
         <div class="row">
             <div class="col-lg-12">
-                <!-- <h2 class="tm-welcome-text">Welcome to Timeless</h2> -->
                 <h2 class="tm-welcome-text">EKS Preventive Control</h2>
-                <h2>Tools:</h2>
+
+                <h2>Overview</h2>
+                <p>The pipeline in this solution starts with a commit to the CodeCommit repo with the Kubernetes manifest files to be deployed onto EKS cluster. CodeBuild will then run Conftest prepackaged with control policies to validate the Kubernetes
+                    manifest files. If any control policy is breached by the Kubernetes manifest files, CodeBuild will stop the process and prevent the Kubernetes manifest files from being deployed into the run-time environment. If all control policies
+                    are satisfied by the Kubernetes manifest files, then the pipeline will pass the validation step and move on to deployment. The deployment step will provision an EKS cluster with an AWS managed worker node group then deploy the Kubernetes
+                    manifests onto the EKS cluster.
+                </p>
+                <hr>
+                <h2>Tools</h2>
                 <br>
                 <h4>Amazon Elastic Kubernetes Services (EKS)</h4>
                 <p>A fully managed service that helps customers run their Kubernetes clusters at scale by minimizing the efforts required to operate a Kubernetes control plane. </p>
@@ -105,14 +112,8 @@ http://www.templatemo.com/tm-517-timeless
                 <p>An open-source tool within CNCF Open Policy Agent suite, to automate preventative controls before the deployment step.</p>
 
                 <hr>
-                <h3>Overview</h3>
-                <p>The pipeline in this solution starts with a commit to the CodeCommit repo with the Kubernetes manifest files to be deployed onto EKS cluster. CodeBuild will then run Conftest prepackaged with control policies to validate the Kubernetes
-                    manifest files. If any control policy is breached by the Kubernetes manifest files, CodeBuild will stop the process and prevent the Kubernetes manifest files from being deployed into the run-time environment. If all control policies
-                    are satisfied by the Kubernetes manifest files, then the pipeline will pass the validation step and move on to deployment. The deployment step will provision an EKS cluster with an AWS managed worker node group then deploy the Kubernetes
-                    manifests onto the EKS cluster.
-                </p>
 
-                <h3>Steps:</h3>
+                <h2>Steps</h2>
                 <ol>
                     <li>Create a new empty AWS CodeCommit Repo that will be used by the CI/CD pipeline as the code source.</li>
                     <li>Download the blog source code from the AWS public repo and check into the empty CodeCommit repo created in step 1.</li>
@@ -160,7 +161,7 @@ http://www.templatemo.com/tm-517-timeless
 
                 <p>By now, we have successfully provisioned a CI/CD pipeline with embedded Kubernetes preventative control policies. Validation: Log onto the AWS Management Console and go to the CodePipeline service page, you should see a pipeline named
                     EksDeployPipeline as shown below:</p>
-                <img src="img/initial_pipeline_run-698x1024.png" alt="initial_pipeline_run" width="700">
+                <img src="img/initial_pipeline_run-698x1024.png" alt="initial_pipeline_run" width="600">
 
                 <p>Looking into the "Details" why the pipline is failing, we can see that there are policy breach in Kubernetes. Hence, the CodeBuild step sets its BUILD state as FAILED and stops the pipeline from deploying the Kubernetes workloads into
                     runtime environment. </p>

@@ -95,16 +95,18 @@ http://www.templatemo.com/tm-517-timeless
             </div>
         </div>
         <div class="row pb-5">
-            <div class="col-lg-3">
-                <img src="img/img-03.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-            </div>
-            <div class="col-lg-9">
-                <p>
-                    W are team Peri, we WITH cte_q1 (CustomerID, CustomerName, CustomerFare, NtileFare) AS  (SELECT C.CustomerID, CONCAT(C.CustomerFName, C.CustomerLName), SUM(Fe.FeeAmount) AS CustomerFee, NTILE(100) OVER (ORDER BY CustomerFare) AS NtileFare FROM tblCustomer
-                    C JOIN tblBooking B ON C.CustomerID = B.CustomerID JOIN tblBooking_Fee BF ON B.BookingID = BF.BookingID JOIN tblFee Fe ON Fe.FeeID = BF.FeeID JOIN tblFlight F ON B.FlightID = F.FlightID JOIN tblAirport A ON F.ArrivalAirportID = A.AirportID
-                    JOIN tblCity C ON A.CityID = C.CityID JOIN tblCountry Cou ON Cou.CountryID = C.CountryID JOIN tblRegion R ON R.RegionID = Cou.RegionID WHERE  R.RegionID = ‘Central Asia’ AND B.BookDateTime > DATEADD(year, -17, GETDATE())), Cte_q2(CustomerID,
-                    CustomerName) AS
-                </p>
+            <!-- <div class="col-lg-3">
+                <img src="img/img_grop.webp" alt="Image" class="rounded-circle tm-img-timeline-lg">
+            </div> -->
+            <div class="row pt-5 pb-5">
+                <div class="d-flex align-items-center flex-column col-lg-12">
+                    <p>
+                        We are Team Peri from University of Washington, Information School. We are a Capstone team that are focusing on studying on cyber security and help more people who is also beginning their career in this field. Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Natus eaque ducimus inventore provident possimus culpa quas fugiat voluptatibus officiis cupiditate! Laboriosam architecto, dolorum ad voluptatum veniam quibusdam nam vero ipsa cumque magnam sint alias officiis. Lorem ipsum,
+                        dolor sit amet consectetur adipisicing elit. Natus eaque ducimus inventore provident possimus culpa quas fugiat voluptatibus officiis cupiditate! Laboriosam architecto, dolorum ad voluptatum veniam quibusdam nam vero ipsa cumque
+                        magnam sint alias officiis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus eaque ducimus inventore provident possimus culpa quas fugiat voluptatibus officiis cupiditate! Laboriosam architecto, dolorum ad voluptatum
+                    </p>
+                </div>
             </div>
         </div>
         <hr>
